@@ -1,0 +1,41 @@
+We claim that the result holds.
+
+{\bf Lemma:} If $k<2r$, then there exists a $k$-regular graph on the vertices
+$0,1,\dots,2r-1$.
+
+{\bf Proof of Lemma:} If $k$ is even, then let there be an edge from $a$ to $b$
+iff $a-b$, taken modulo $2r$, is a member of $S_k=\{-k/2,-k/2+1,\dots,-1,1,\dots,k/2\}$. 
+Moreover, since $k/2<r$, none of the members of $S_k$ coincide. In particular,
+$|S_k|=k$, and the graph is $k$ regular. Moreover, since $(a+r)-a\equiv_{2r}r \notin S_k$,
+the vertices $a$ and $a+r$ (mod $2r$) are not adjacent.
+
+If $k$ is odd, then $k=k_0+1$, with $k_0$ even. Then there exists a $k_0$-regular graph
+on $0,1,\dots,2r-1$, described above. To this graph, add edges between $a$ and $a+r$ for
+$a=0,1,\dots,r-1$. This increases the degree of each vertex by one, so the resulting graph
+is $k$-regular. This concludes the proof of the lemma.
+
+{\bf Main Proof:} Let $T_k$ be a $k$-regular graph on $M=0,1,\dots,2r-1$. We define
+$H$ as follows:
+
+$V(H)=M\times V(G)$
+
+$(a,b)(c,d)$ is an edge in $H$ iff either
+\begin{itemize}
+\item $a=c$ and $bd$ is an edge in $G$
+\item $b=d$ and $ac$ is an edge in $T_{r-\text{deg}_G b}$
+\end{itemize}
+We claim that $H$ is $r$-regular. Consider a vertex $(a,b)$. It can only be adjacent
+to a vertex $(c,d)$ in two cases. If $a=c$, then $(a,b)$ is adjacent to $(c,d)$ iff
+$bd$ is an edge in $G$. There are $\text{deg}_G b$ such edges. If $b=d$, then $(a,b)$
+is adjacent to $(c,d)$ iff $ac$ is an edge in $T_{r-\text{deg}_G b}$, which is
+$r-\text{deg}_G b$ regular, so there are $r-\text{deg}_G b$ such edges.
+Since $a=c$ and $b=d$ implies $(a,c)=(b,d)$, $(a,c)(b,d)$ is not an edge.
+So $\text{deg}_H (a,b) = \text{deg}_G b + r-\text{deg}_G b = r$. Hence $H$ is
+$r$-regular.
+
+Finally, let us identify the vertices $(0,b)$ with $b\in V(G)$. We claim that $G$
+is induced on these vertices. But $(0,b)(0,d)\in E(H)$ iff $bd \in E(G)$, so this
+is clearly true.
+
+Therefore the result holds.
+
