@@ -1,0 +1,10 @@
+Let $v$ be a vertex in $G$. We count the vertices of $G$ by partitioning them into three subsets:
+\begin{enumerate}
+\item $\{v\}$, which has $1$ element.
+\item The vertices adjacent to $v$. $G$ is $r$-regular, so $v$ has exactly $r$
+neighbours.
+\item The vertices non-adjacent to $v$, excluding $v$. These are exactly the
+vertices adjacent to $v$ in $\overline{G}$, and since $\overline{G}$ is $r$-regular,
+there are exactly $r$ vertices in this set.
+\end{enumerate}
+So the order of $G$ is $1+r+r=2r+1$, which is clearly odd.
