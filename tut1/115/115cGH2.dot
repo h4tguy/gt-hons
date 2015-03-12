@@ -1,0 +1,8 @@
+graph GH {
+    overlap=false
+    splines=true
+    node [shape=circle]
+    label="GxH"
+
+    a -- b -- c -- d -- e -- a
+}

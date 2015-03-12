@@ -1,0 +1,15 @@
+graph A {
+    a -- b
+    a -- c
+    c -- d
+}
+
+graph "A'" {
+    "a'" -- "b'"
+    "a'" -- "c'"
+    "c'" -- "d'"
+    //edge [style=invis]
+    "b'" -- "d'"
+    "c'" -- "b'"
+    "c'" -- "a'"
+}

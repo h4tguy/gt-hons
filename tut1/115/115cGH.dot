@@ -1,0 +1,15 @@
+graph GH {
+    node [shape=circle]
+    a -- b
+    b -- c
+    d -- e
+    c -- d [weight=2]
+    e -- a
+    label="G+H"
+    edge [len=3]
+    "a'" -- a
+    "a'" -- b
+    "a'" -- c
+    "a'" -- d
+    "a'" -- e
+}

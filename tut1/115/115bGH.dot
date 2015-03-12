@@ -1,0 +1,26 @@
+graph GH {
+    splines=true
+    overlap=false
+    edge [len=2]
+    node [shape=circle]
+    label="G+H"
+    a -- "a'"
+    a -- "b'"
+    a -- "c'"
+    b -- "a'"
+    b -- "b'"
+    b -- "c'"
+    c -- "a'"
+    c -- "b'"
+    c -- "c'"
+    d -- "a'"
+    d -- "b'"
+    d -- "c'"
+    e -- "a'"
+    e -- "b'"
+    e -- "c'"
+    "a'"
+    "b'"
+    "c'"
+}
+

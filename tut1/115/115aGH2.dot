@@ -1,0 +1,43 @@
+graph GH {
+    overlap=false
+    splines=true
+    node [shape=circle]
+    label="GxH"
+
+    edge [len=4]
+    a -- b
+    a -- c
+    a -- d
+    a -- e
+
+    b -- c
+    b -- d
+    b -- e
+
+    c -- d
+    c -- e
+
+    d -- e
+
+    "a'" -- "b'"
+    "a'" -- "c'"
+    "a'" -- "d'"
+    "a'" -- "e'"
+              
+    "b'" -- "c'"
+    "b'" -- "d'"
+    "b'" -- "e'"
+              
+    "c'" -- "d'"
+    "c'" -- "e'"
+              
+    "d'" -- "e'"
+
+    edge [len=1]
+    edge [weight=2]
+    "a" -- "a'"
+    "b" -- "b'"
+    "c" -- "c'"
+    "d" -- "d'"
+    "e" -- "e'"
+}

@@ -1,0 +1,30 @@
+graph GH {
+    overlap=false
+    splines=true
+    node [shape=circle]
+    label="GxH"
+
+    edge [len=2]
+
+    edge [weight=2]
+    edge [len=1]
+    a1
+    a2
+    a3
+
+    b1
+    b2
+    b3
+
+    c1
+    c2
+    c3
+
+    d1
+    d2
+    d3
+
+    e1
+    e2
+    e3
+}

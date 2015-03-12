@@ -1,0 +1,8 @@
+graph H {
+    splines=true
+    overlap=false
+    edge [len=2]
+    node [shape=circle]
+    label="H"
+    a -- b -- c -- d -- e -- a
+}
