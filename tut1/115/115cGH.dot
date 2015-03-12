@@ -7,9 +7,9 @@ graph GH {
     e -- a
     label="G+H"
     edge [len=3]
-    "a'" -- a
-    "a'" -- b
-    "a'" -- c
-    "a'" -- d
-    "a'" -- e
+    "1" -- a
+    "1" -- b
+    "1" -- c
+    "1" -- d
+    "1" -- e
 }

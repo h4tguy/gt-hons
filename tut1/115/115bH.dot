@@ -2,8 +2,8 @@ graph H {
     edge [len=2]
     node [shape=circle]
     label=H
-    "a'"
-    "b'"
-    "c'"
+    "1"
+    "2"
+    "3"
 }
 
