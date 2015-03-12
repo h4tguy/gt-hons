@@ -4,5 +4,9 @@ graph GH {
     node [shape=circle]
     label="GxH"
 
-    a -- b -- c -- d -- e -- a
+    "(a, a)" -- "(b, a)"
+    "(b, a)" -- "(c, a)"
+    "(c, a)" -- "(d, a)"
+    "(d, a)" -- "(e, a)"
+    "(e, a)" -- "(a, a)"
 }

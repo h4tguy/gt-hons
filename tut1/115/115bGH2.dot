@@ -8,23 +8,23 @@ graph GH {
 
     edge [weight=2]
     edge [len=1]
-    a1
-    a2
-    a3
+    "(a, a)"
+    "(a, b)"
+    "(a, c)"
 
-    b1
-    b2
-    b3
+    "(b, a)"
+    "(b, b)"
+    "(b, c)"
 
-    c1
-    c2
-    c3
+    "(c, a)"
+    "(c, b)"
+    "(c, c)"
 
-    d1
-    d2
-    d3
+    "(d, a)"
+    "(d, b)"
+    "(d, c)"
 
-    e1
-    e2
-    e3
+    "(e, a)"
+    "(e, b)"
+    "(e, c)"
 }
