@@ -1,0 +1,8 @@
+graph G {
+    label=B
+    a -- b
+    b -- c
+    b -- d
+    d -- c
+    d -- e
+}

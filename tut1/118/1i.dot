@@ -1,0 +1,5 @@
+graph G {
+    label="A-bar"
+    node [shape=circle]
+    b -- d -- a -- c
+}
