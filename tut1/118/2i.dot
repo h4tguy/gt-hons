@@ -1,0 +1,9 @@
+graph G {
+    label="B-bar"
+
+    a -- c
+    a -- d
+    a -- e
+    b -- e
+    c -- e
+}

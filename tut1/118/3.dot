@@ -1,0 +1,4 @@
+graph G {
+    label="C5"
+    a -- b -- c -- d -- e -- a
+}
