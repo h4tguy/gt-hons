@@ -1,0 +1,13 @@
+Let $T$ be a tree of order at least $3$. Suppose first that $rad\ T = diam\ T$.
+Then the eccentricity of every vertex of $T$ must be equal, and every vertex
+is in the centre of $T$. But the centre of a tree contains at most $2$ vertices
+(\cite{notes}, Theorem 17), and $T$ at least $3$, so this is a contradiction.
+So $rad\ T \neq diam\ T$, and therefore $rad\ T < diam\ T=2$ (\cite{notes}, Theorem 7).
+Now if $rad\ T = 0$ then $T$ must be $K_1$, which is impossible since $T$ is
+nontrivial. So $rad\ T = 1$. Then let $v$ be a vertex in the centre of $T$. Then if
+$u$ is a vertex, $u \neq v$, then $d(u,v) \le rad T = 1$. But then $d(u,v)=1$,
+since $u \neq v$, and therefore $u$ and $v$ are adjacent. Now, in order to show
+$T$ to be a star with centre $v$, it is sufficient to show that there is no edge
+$u_1u_2$ with $u_1,u_2 \neq v$. But if there were such an edge, then $v,u_1,u_2$
+would form a cycle, contradicting that $T$ is a tree. So the only edges in $T$ are
+those between each vertex and $v$, and $T$ is a star.
