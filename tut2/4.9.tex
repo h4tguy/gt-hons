@@ -1,0 +1,44 @@
+Note that (a), (c) and (d) are equivalent by the definition of a tree and
+\cite{notes}, Theorem 21. We must prove these are additionally equivalent
+to (b) and (d).
+
+\paragraph{$(a)\Rightarrow(b)$} Suppose $G$ is a tree. Then it is, by
+definition, connected, so every two vertices are joined by at least one
+path. Suppose now that there are two vertices $x$ and $y$ that are joined
+by two distinct paths $P_1$ and $P_2$. Consider $p$, the vertex before the
+first vertex that differs between $P_1$ and $P_2$, and let $q$ be the first
+vertex after $p$ in $P_1$ which also occurs after $p$ in $P_2$. Let
+$P'_1$ be the path from $p$ to $q$ along $P_1$, and $P'_2$ be the path from
+$p$ to $q$ along $P_2$. It is clear that $P'_1$ concatenated with the
+reverse of $P'_2$ is a closed walk starting and ending at $p$. To show it is
+a cycle, it is sufficient to show that no vertex internal to $P'_1$ appears
+in $P'_2$. However, if such a vertex $q'$ were to exist, it would be a
+vertex after $p$ on $P_1$, which also occurs after $p$ on $P_2$, and
+moreover before $q$ on $P_1$, contradicting the definition of $q$ as the
+first such vertex. Therefore the closed walk described is a cycle, which
+contradicts that two vertices in $G$ are joined by distinct paths. $(b)$
+follows.
+
+\paragraph{$(b)\Rightarrow(e)$} 
+Suppose $G$ contains a cycle, and let two vertices on this cycle be $x$
+and $y$. Then by following the cycle from $x$ to $y$ in each direction,
+two internally disjoint paths from $x$ to $y$ can be found, contradicting
+that there is a unique $x-y$ path in $G$. So $G$ is acyclic.
+Now, since $G$ is acyclic, any
+cycle in $G+uv$ contains the edge $uv$. But clearly there is at least one
+such cycle, that obtained by following the unique path from $u$ to $v$ in
+$G$, then using the edge $uv$ (since $u$ and $v$ are nonadjacent, this edge
+is not in $G$, so hasn't been used earlier in the cycle). Now suppose $C$ is
+a cycle in $G+uv$. It must also contain $uv$, hence $u$ and $v$. Now
+consider the path obtained by following $C$ from $u$ to $v$, not using the
+edge $uv$. This is a path connecting $u$ and $v$ in $G$, hence it must be
+the unique path connecting $u$ and $v$ in $G$, and hence $C$ is the cycle
+obtained from this path as described earlier. So the cycle is unique.
+
+\paragraph{$(e)\Rightarrow(a)$} $G$ is already acyclic, so it suffices to
+prove it connected. Let $x$ and $y$ be two vertices in $G$. If they are
+adjacent, there is clearly a path between them. If they are not, then
+$G+xy$ contains a cycle $C$. Since $G$ is acyclic, $C$ includes
+$xy$ and hence $x$ and $y$. Now, following $C$ from $x$ to $y$, not using
+the edge $xy$ gives a path from $x$ to $y$ in $G$. So any pair
+of vertices in $G$ is connected, so $G$ is. Hence $G$ is a tree.
