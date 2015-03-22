@@ -1,0 +1,23 @@
+It is sufficient to show that every pair of vertices of $G$ lie on a cycle
+(\cite{notes}, Theorem 13). Firstly, suppose $x$ and $y$ are non-adjacent
+vertices in $G$. Then there are $n-2$ other vertices, and since there are
+at least $n$ edges from $x$ or $y$ to these vertices, there exist
+two vertices $a$ and $b$ adjacent to both $x$ and $y$. Then $x-a-y-b$ is a
+cycle containing $a$ and $b$.
+
+Now suppose $x$ and $y$ are adjacent. Suppose there is a third vertex $z$
+adjacent to both, then $x-y-z$ is a cycle containing $x$ and $y$.
+Now suppose that there is a vertex $x'$ which is adjacent to $x$ and not
+to $y$. Then $\text{deg}\ x'+\text{deg}\ y \ge n$. There are $n-3$ vertices
+other than $x$,$y$ and $x'$, and at least $n-2$ edges connecting $x'$ and
+$y$ to them, so there is a vertex $a$ adjacent to both $x'$ and $y$. Then
+$x'-a-y-x$ is a cycle containing both $x$ and $y$. Similarly, if there is
+a vertex adjacent to $y$ but not to $x$, then $x$ and $y$ lie on a cycle.
+Finally, if $x$ and $y$ are adjacent to each other, but neither is adjacent
+to any other vertices, then, since $n\ge 3$, there is a third vertex $p$
+in the graph. Then $\text{deg}\ y+\text{deg}\ z \ge n$. But there are
+only $n-3$ vertices other than $x$, $y$ and $z$ that $z$ can be adjacent
+to, so $\text{deg}\ y \ge 3$. So $y$ must have a neighbour other than $x$,
+a contradiction.
+
+So every pair of vertices in $G$ is on a cycle, and hence $G$ is a block.
