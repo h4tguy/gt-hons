@@ -1,0 +1,9 @@
+Let $G$ be a connected graph with cut vertex $v$. Then $G-v$ can be partitioned into connected
+components $U_1, \ldots , U_k$ with $k >= 2$.
+
+Let $i$ be an integer, $1\le i \le k $. Let $u_1 \in U_i$ and $u_2 \notin U_i$. Then every $u_1 - u_2$ path in $G$ goes through $v$. Since
+$u_1u_2 \notin G$, $u_1u_2 \in \overline{G}$ so $u_1, u_2$ are in the same component within $\overline{G}-v$.
+
+Let $u_1, u_2 \in U_i$ and $z \notin U_i$ then $u_1z, u_2z \in \overline{G}-v$ and $(u_1, z, u_2)$ is
+a $u_1 - u_2$ path in $\overline{G}$. Since the choice of $i$ was arbitrary, every pair of vertices 
+in $\overline{G}-v$ is connected and therefore $v$ is not a cut vertex.
