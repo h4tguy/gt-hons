@@ -1,0 +1,12 @@
+digraph G {
+    label=G
+    node [shape=circle]
+    u -> v
+    v -> a
+    a -> b
+    b -> c
+    c -> u
+    u -> a
+    u -> b
+    u -> c
+}
