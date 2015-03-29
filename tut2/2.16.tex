@@ -1,0 +1,32 @@
+\paragraph{Lemma:} 
+
+If $G$ is a graph of diameter at least $3$, then $\overline{G}$ has diameter
+at most $3$.
+
+\paragraph{Proof of Lemma:} 
+
+If $G$ is a graph of diameter at least $3$, then there are
+two vertices $u$ and $v$ in $G$ with $d_G(u,v) \ge 3$. $uv$ is not an edge in $G$
+(or else $d_G(u,v)$ would be $1$), so $uv$ is an edge in $\overline{G}$. Now
+let $w$ be a vertex distinct from $u$ and $v$. Then suppose neither $wu$ or
+$wv$ were edges in $\overline{G}$. Then both must be edges in $G$, and
+$(u,w,v)$ is a $u-v$ path of length $2$, a contradiction since $d_G(u,v) \ge 3$.
+So every vertex is adjacent to $u$ or $v$ in $\overline{G}$ (including $u$ and $v$) and 
+the two sets $U=\text{nbd}_{\overline{G}} u$ and $V=\text{nbd}_{\overline{G}} v$ cover
+$V(G)$.
+
+Let $w_1, w_2$ be in  $U$, then $(w_1,u,w_2)$ is a $w_1-w_2$ walk in $\overline{G}$
+of length $2$, so $d_{\overline{G}}(w_1,w_2)\le 2$. Similarly if $x_1,x_2 \in V$,
+$d_{\overline{G}}(x_1,x_2)\le 2$. If $y \in U, z \in V$, then $(y,u,v,z)$ is a $y-z$
+walk in $\overline{G}$ of length $3$, so $d(y,z) \le 3$. Hence the distance between
+any two vertices in $\overline{G}$ is at most $3$, and $diam\ \overline{G} \le 3$. This
+concludes the proof of the lemma.
+
+\paragraph{Main Proof:}
+Let $G$ be a graph which is isomorphic to its complement.
+If $diam\ G >3$, then also 
+$diam\ G = diam\ \overline{G} \le 3$
+by the lemma, a contradiction. Otherwise $diam\ G \le 3$. If $diam\ G = 1$, then
+every vertex is adjacent to every other vertex, so $G \cong K_n$ if $G$ is of order
+$n$. But then $\overline{G} \cong \overline{K}_n$, which is not isomorphic to $K_n$
+when it is nontrivial. So $diam\ G$ is $2$ or $3$.
