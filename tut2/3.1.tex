@@ -1,3 +1,6 @@
 Assume that $|V_1| \neq |V_2|$. 
-$V_1$ and $V_2$ are partite sets so there are no edges within $V_1$ or $V_2$.
-$G$ is n-regular so every vertex in both $V_1$ and $V_2$ have degree n. So the number of edges in $V_1$ is $n|V_1|$ and the number of edges in $V_2$ is $n|V_2|$ but $|V_1| \neq |V_2| \implies n|V_1| \neq n|V_2|$. This is a contradiction as every edge in $V_1$ is an edge in $V_2$ . 
+$V_1$ and $V_2$ are partite sets so there are no edges in $G[V_1]$ and $G[V_2]$.
+
+$G$ is $n$-regular so every vertex in both $V_1$ and $V_2$ has degree n. So the number of edges incident with a vertex in $V_1$ is $n|V_1|$ and the number of edges incident with a vertex in $V_2$ is $n|V_2|$ but $|V_1| \neq |V_2| \implies n|V_1| \neq n|V_2|$. This is a contradiction as every edge in $V_1$ is an edge in $V_2$.  
+
+Therefore $|V_1| = |V_2|$.
