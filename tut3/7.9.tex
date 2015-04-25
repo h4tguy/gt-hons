@@ -1,0 +1,17 @@
+For a graph $G$, define 
+$$M(G) = \text{max}\left\{\delta(H): \text{$H$ is an induced subgraph of $G$} \right\}.$$
+
+We proceed by induction on the order $n$ of $G$. Clearly when $n=1$ the
+result holds ($K_1$ is $1$-colourable). Suppose the result is true for
+$n=k$. We show it is true for $n=k+1$.
+
+Let $G$ be a graph of order $k+1$ and let $v$ be a vertex of minimal degree in
+$G$. Firstly, $M(G-v)\le M(G)$ since the induced subgraphs of $G-v$ are a subset of
+the induced subgraphs of $G$. So, in particular, it is possible to colour $G-v$ with
+at most $1+M(G)$ colours, by the induction hypothesis.  However, clearly
+$\text{deg } v = \delta(G) \le M(G)$ so $v$ has at most $M(G)$ neighbours and,
+in particular, there is a colour (from the colouring of $G-v$) that it is not
+adjacent to. If we use this colour for $v$, we have a proper colouring for $G$ using
+at most $1+M(G)$ colours, so $\chi(G) \le 1+M(G)$.
+
+Therefore, by induction, $\chi(G) \le 1+M(G)$ for all graphs $G$.
