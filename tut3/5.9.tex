@@ -1,0 +1,17 @@
+We first show that if $S$ is a set of at most $k-1$ vertices
+of $H$, then $H-S$ is connected.
+
+Firstly note that $|V(G)\cap S| \le |S| = k-1$ so $G- (V(G)\cap S)$
+is connected. We then have two cases:
+
+If $x \in S$, then $H-S=G-(V(G)\cap S)$, so $H-S$ is connected and we
+are done.
+
+If $x \notin S$, then there is an $i$ such that $v_i \notin S$ (since
+$|S|<k$). But then $x$ is connected to $v_i$, and hence to every other
+vertex in $G-(V(G)\cap S)$ by transitivity. So every pair of vertices in
+$V(H-S) = V(G-(V(G)\cap S))\cup\{x\}$ is connected and we are done.
+
+Hence $\kappa(H) \ge k$. However 
+$\kappa(H) \le \delta(H) \le \text{deg } x =k$ 
+(Whitney's Theorem, \cite{notes} Theorem 24), so $\kappa(H) = k$.
