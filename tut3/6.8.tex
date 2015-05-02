@@ -1,0 +1,32 @@
+\begin{enumerate}[(a)]
+    \item Let $G$ be an outerplanar graph. We then add a vertex $v$ 
+    that is adjacent to all vertices in $G$. 
+    
+    We can see this graph $G+v$ is planar by drawing $v$
+    above the embedding of $G$ and joining $v$ with the vertices in $G$ 
+    along the outer boundary. These edges don't cross any boundaries of 
+    $G$ so $G+v$ is planar.  $G+v \overset{\tilde}{\eq} G+K_1$.
+
+    Let $G$ not be outerplanar and let $G+K_1$ be planar. We can embed
+    $G+K_1$ so that $K_1$ is on the exterior boundary of $G+K_1$.
+    If we remove $K_1$ from this embedding there should exist a
+    vertex $a$ on the interior of $G$ since $G$ is not outerplanar.
+    But then the edge $aK_1$ crosses the edge on the exterior boundary
+    of $G$ making $G+K_1$ not planar, contradiction. Therefore
+    $G$ is outerplanar.
+
+    \item Let $G$ be an outerplanar graph of order $n \ge 2$ and size $m$, 
+    then $G+K_1$ is planar with size $m+n$ and order $n+1$. Then
+    by Corollary 33 
+        $$ m+n <= 3(n+1) - 6 = 3n+3-6 = 3n-3$$
+        $$m <= 2n-3$$
+        as required.
+
+    \item Let $G$ be an outerplanar graph with subdivision $K_4$ then by
+    6 a) above $G+v$ is planar. But $G+v$ has $K_5$ as a subdivision 
+    and by Kuratowski's theorem is not planar. A contradiction. An
+    outerplanar graph therefore cannot have a subdivision of $K_4$. 
+
+    The same argument proves that a outerplanar graph can have no
+    subdivision of $K_{2m3}$.
+\end{enumerate}
