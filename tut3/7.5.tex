@@ -1,0 +1,13 @@
+A graph $H$ with size at least one is bipartite iff $\chi(G) = 2$ 
+and a graph is bipartite iff $H$ contains no odd cycles. 
+So if $G$ is minimally 3-chromatic it contains an odd cycle.
+
+Let $v_1, v_2, \ldots, v_{2n+1}$ be the vertices on an odd
+cycle in $G$ with $v_iv_{i+1} \in E(G)$. Assume that $G$
+contains another vertex $u \ne v_i \forall i \in \{1, \ldots, 2n+1\}$
+and without loss of generality $uv_1 \in E(G)$. Since $G$ is
+critically k-chromatic $\chi(G-u) = 2$. But $\chi(\{ v_1, \ldots, v_{2n+1} \}) = 3$
+and $\chi(G-u) = 3 \ne 2$ contradiction. So $G$ is exactly an odd-cycle.
+
+If $G$ is minimally k-chromatic without isolated vertices, by Theorem
+42 it is critically k-chromatic and the above applies
