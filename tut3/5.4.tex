@@ -1,5 +1,30 @@
 \begin{enumerate}[(a)]
 \item
-\item
+\item We prove by induction that $\kappa(Q_t)=\lambda(Q_t)=t$. For
+	$t=1$ this is obvious, for $Q_1=K_2$ and so $\kappa(Q_1)=\lambda(Q_1)=1$.
+	Suppose it is true for $t\le s-1$. We show it true for $t=s$.
+
+	Firstly, note that $\kappa(Q_s)\le\lambda(Q_s)\le \delta(Q_s)=s$ (\cite{notes}, Theorem 24)
+	and so it is sufficient to prove $\kappa(Q_s)\ge s$. Let $X$ be an $s-1$ vertex
+	set and let $u,v$ be two arbitrary vertices not in $X$. We show that $u$ and $v$
+	are connected in $Q_s-X$. We index the vertices of $Q_s$ with coordinates in
+	$\mathbb{Z}_2^s$, as is standard. We have two cases:
+	\begin{itemize}
+		\item $u,v$ share at least one coordinate, say the $k$-th. Then the induced
+			subgraph on the vertices sharing the $k$-th coordinate with $u$, call it $P$, 
+			is isomorphic to $Q_{s-1}$.
+			If there are at most $s-2$ vertices from $X$ in $P$, then $P-X$ is connected
+			by the induction hypothesis, and so $u$ and $v$ are connected.
+			Otherwise, $X \subset V(P)$. Then let $u'$ and $v'$ have the same coordinates
+			as $u,v$ respectively, except with the $k$-th switched. Then 
+			$u'u,v'v \in E(Q_s)$ and $u'$ and $v'$ are trivially connected (since both are
+			in $Q_s-P \cong Q_{s-1}$), so $u$ and $v$ are connected.
+		\item $u,v$ do not have any coordinate in common. Then $u$ has at least one neighbour
+			in $Q_s-X$ (since $\text{deg}_{Q_s} u = s$). Moreover, that neighbour has at
+			least one coordinate different from $u$, hence at least one coordinate in common
+			with $v$. So $u$ is connected to $v$ via this neighbour, by the first case.
+	\end{itemize}
+	So, by induction $\kappa(Q_t) \ge t$ for all positive integers $t$, and hence
+	$\kappa(Q_t)=\lambda(Q_t)=t$.
 \item
 \end{enumerate}
