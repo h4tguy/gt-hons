@@ -1,0 +1,14 @@
+We first prove $\chi(G)\le n+1-\beta(G)$. Let $S$ be a maximum
+independent set. We show that we can colour $G$ with at most
+$n+1-\beta(G)=n+1-|S|$ colours. First colour the $n-\beta(G)$
+vertices of $G-S$ each a different colour, then colour 
+the vertices of $S$ another (single) colour. This is clearly
+a proper colouring since the only pairs of vertices that have
+the same colour are in $S$, and hence not adjacent.
+
+We now prove $\chi(G) \ge n/\beta(G)$, or equivalently $\beta(G) \ge n/\chi(G)$.
+There is a proper colouring of $G$ with $\chi(G)$ colours, but by
+pigeonhole principle, there is a monochromatic subset $L$ of that colouring
+of at least $n/\chi(G)$ vertices. However, a monochromatic subset of
+a proper colouring must necessarily be independent, so
+	$\beta(G) \ge |L| \ge n/\chi(G)$.
