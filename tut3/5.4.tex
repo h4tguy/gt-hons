@@ -1,5 +1,30 @@
 \begin{enumerate}[(a)]
-\item
+	\item The Petersen graph is cubic, so $\kappa(G)=\lambda(G)$
+		(see 5.12). We show that $\lambda(G)=3$. Firstly, 
+		$\lambda(G) \le \delta(G)=3$ by Whitney (\cite{notes}, Theorem 24),
+		and so we need to show that removing any two edges from $G$ leaves it
+		connected. The Petersen graph consists of $2$ $C_5$s (let's call them $A$ and $B$)
+		joined
+		by $5$ edges, with every vertex in each of $A$, $B$ adjacent to some
+		vertex in the other. Note that $C_5$ is two-edge-connected, so if we
+		remove an edge from either $A$ or $B$ it remains connected as a subgraph.
+		
+		If at least one edge between $A$ and $B$ is removed, then at most $1$
+		edge internal to each of $A$ and $B$ is removed, and each is still
+		internally connected. Since at least $3$ edges remain connecting $A$ and
+		$B$, the whole graph remains connected.
+
+		If one edge is removed from each of $A$ and $B$, then both remain
+		internally connected, and the graph is still connected since there
+		are $5$ edges connecting $A$ and $B$.
+
+		If two edges are removed from wlog $A$, then $B$ is still
+		connected, and each vertex in $A$ is adjacent to a vertex in $B$,
+		so the whole graph is still connected.
+
+		In any case, removing two edges does not disconnect $G$, so
+		$\lambda(G) \ge 3$ and hence $\kappa(G)=\lambda(G)=3$.
+
 \item We prove by induction that $\kappa(Q_t)=\lambda(Q_t)=t$. For
 	$t=1$ this is obvious, for $Q_1=K_2$ and so $\kappa(Q_1)=\lambda(Q_1)=1$.
 	Suppose it is true for $t\le s-1$. We show it true for $t=s$.
@@ -26,5 +51,26 @@
 	\end{itemize}
 	So, by induction $\kappa(Q_t) \ge t$ for all positive integers $t$, and hence
 	$\kappa(Q_t)=\lambda(Q_t)=t$.
-\item
+
+\item We show $\kappa(G)=\lambda(G)=4$
+	By Whitney, $\kappa(G) \le \lambda(G) \le \delta(G)=4$. It is sufficient to
+	prove that $\kappa(G)=4$ or that any pair of vertices has $4$ internally
+	disjoint paths connecting them.
+
+	Consider any $2$ vertices $u,v$. We repeatedly use that each of the $6$
+	vertices has degree $4$, so is not adjacent to exactly one other vertex.
+	We have two cases:
+	\begin{itemize}
+		\item If $u,v$ are not adjacent, then they are each adjacent to the other
+			$4$ vertices $a,b,c,d$, and $uav,ubv,ucv,udv$ are $4$ internally disjoint
+			$u-v$ paths.
+
+		\item If $u,v$ are adjacent, then they are also both adjacent to two
+			vertices $x,y$ and there are two vertices $a$ and $b$ such that $a$ is
+			adjacent to $u$ and not $v$, $b$ is adjacent to $v$ and not $u$ and
+			$a$ is adjacent to $b$. Then $uv$, $uxv$, $uyv$ and $uabv$ are $4$
+			internally disjoint $u-v$ paths.
+	\end{itemize}
+	In either case $p(u,v)=4$, and since the choice of $u,v$ was arbitrary,
+	$\kappa(G) \ge 4$. Hence $\kappa(G)=\lambda(G)=4$.
 \end{enumerate}
