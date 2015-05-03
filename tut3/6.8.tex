@@ -22,18 +22,23 @@
         $$m \le 2n-3$$
         as required.
 
-    \item Let $G$ be an outerplanar graph with a subdivision of $K_4$ then by
-    6 a) above $G+v$ is planar. But $G+v$ has $K_5$ as a subdivision 
-    and by Kuratowski's theorem is not planar. A contradiction. An
-    outerplanar graph therefore cannot have a subdivision of $K_4$. 
+    \item $G$ is outerplanar iff $G+K_1$ is planar iff $G+K_1$ contains
+			$K_5$ or $K_{3,3}$ as a subdivision (Kuratowski). We show
+			this is equivalent to $K_4$ or $K_{2,3}$ being a subdivision of
+			$G$.
 
-    The same argument proves that a outerplanar graph can have no
-    subdivision of $K_{2,3}$.
+			Let $v$ be the vertex of $K_1$, and suppose $G+K_1$ contains
+			$K_5$ or $K_{3,3}$ as a subdivision $S$. If $v \notin S$, then
+			$G$ contains $K_5$ or $K_{3,3}$ as a subdivision, so contains
+			$K_4$ or $K_{2,3}$ as a subdivision. Otherwise $v \in S$.
+			But then $S-v$ still contains $K_4$ or $K_{2,3}$ as a subdivision,
+			since if $P$ is $K_5$ or $K_{3,3}$ minus any vertex or edge,
+			$P$ still contains $K_4$ or $K_{2,3}$ as a subgraph, respectively.
+			Since $S-v$ is a subgraph of $G$, $G$ contains $K_4$ or $K_{2,3}$ as
+			a subdivision.
 
-    Let $G+K_1$ contain a subdivision of $K_5$ and $x$ be a vertex
-    with degree $|V(G)|$. Removing any vertex
-    from $K_5$ reduces it to $K_4$. So if we remove $x$ from $G+K_1$
-    then $G+K_1-x$ contains $K_4$ but not $K_5$. $G+K_1-x \cong G$.
-
-    The same argument applies to $K_{3,3}$.
+			Now suppose $G$ contains $K_4$ or $K_{2,3}$ as a subdivision $S$.
+			Then $S+K_1$ contains $K_5$ or $K_{3,3}$ as a subdivision, but
+			$S+K_1$ is a subgraph of $G+K_1$, so $G+K_1$ contains $K_5$ or 
+			$K_{3,3}$ as a subdivision.
 \end{enumerate}
