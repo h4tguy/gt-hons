@@ -15,7 +15,18 @@ If none of the vertices in $S$ are adjacent to each other we can do the followin
 For every $x \in S$, $x$ is connected to either $X$ or $Y$ by at most one edge $e$. 
 Add this edge to our edge-cut.
 
-If $v_1, v_2 \in S$ are adjacent then $v_1$ has one edge incident to a vertex 
+If $v_1, v_2 \in S$ are adjacent then we have two cases:
+\begin{enumerate}
+    \item $v_1, v_2$ together have either two edges
+incident to one component and two to the other. In this case we can choose any two of the edges
+incident to the same component.
+    \item $v_1$ is adjacent to a vertex in one component, a vertex in the 
+        other component and $v_2$. $v_2$ is adjacent to to $v_1$ and 
+        two vertices in the other component. In this case we have a contradiction
+    since $v_1$ is a cut-vertex and $\kappa(G) = 1$. This case is impossible. 
+\end{enumerate}
+
+$v_1$ has one edge incident to a vertex 
 in $X$ and one edge incident to a vertex in $Y$. Similarly with $v_2$. Choose 
 the edges of $v_1, v_2$ incident with $X$ to be in our edge-cut. 
 
