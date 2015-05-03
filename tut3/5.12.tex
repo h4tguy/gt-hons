@@ -2,41 +2,33 @@ Let $G$ be a cubic graph.
 
 By Whitney's theorem we know that $\kappa(G) \le \lambda(G) \le \delta(G) = 3 $.
 
-Assume that $S$ is a vertex-cut with $|S| = \kappa(G)$. Then
-$G-S$ is disconnected into two components $X, Y$. 
-We will now show that we can find a minimal edge-cut $T$ such that $|T| = |S|$.
-
 If $\kappa(G) = 3$. $\kappa(G) = 3 \le \lambda(G) \le \delta(G) = 3$
 then $\lambda(G) = 3 = \kappa(G)$ as required.
 
 For the cases where $\kappa(G) \in \{1, 2\}$ we continue as follows:
 
+Assume that $S$ is a vertex-cut with $|S| = \kappa(G)$. Let $X$ be a connected
+component of $G-S$ and let $Y=G-S-X$.
+We will now show that we can find an edge-cut $T$ such that $|T| \le |S|$.
+
 If none of the vertices in $S$ are adjacent to each other we can do the following:
 For every $x \in S$, $x$ is connected to either $X$ or $Y$ by at most one edge $e$. 
 Add this edge to our edge-cut.
 
-If $v_1, v_2 \in S$ are adjacent then we have two cases:
-\begin{enumerate}
-    \item $v_1, v_2$ together have either two edges
-incident to one component and two to the other. In this case we can choose any two of the edges
-incident to the same component.
-    \item $v_1$ is adjacent to a vertex in one component, a vertex in the 
-        other component and $v_2$. $v_2$ is adjacent to to $v_1$ and 
-        two vertices in the other component. In this case we have a contradiction
-    since $v_1$ is a cut-vertex and $\kappa(G) = 1$. This case is impossible. 
-\end{enumerate}
+If $v_1, v_2 \in S$ are adjacent then since they each have degree $3$, there
+are at most $4$ edges connecting them to $X$ and $Y$. By pigeonhole principle,
+there are at most $2$ edges connecting them to either $X$ or $Y$. Let these
+edges be our edge-cut.
 
-$v_1$ has one edge incident to a vertex 
-in $X$ and one edge incident to a vertex in $Y$. Similarly with $v_2$. Choose 
-the edges of $v_1, v_2$ incident with $X$ to be in our edge-cut. 
+There are no other cases since $|S| \le 2$.
 
-For every vertex in our vertex cut we have inserted one edge into our edge
-cut so $|S| = |T|$ as required. 
+For every vertex in our vertex cut we have inserted at most one edge into our edge
+cut so $|S| \ge |T|$ as required. 
 
-Let $x\in X, y \in Y$, a $x-y$ path would have to go through one of the
-vertices in the vertex-cut $S$. For any such vertex $s \in S$ it is the
-case that the edge from the component $X$ to $s$ has been removed or the
-vertex from $s$ to the component $Y$ has been removed so no such path
-exists, $X, Y$ is disconnected and $T$ is a vertex cut. 
+Let $x\in X, y \in Y$, a $x-y$ path in $G-T$ would have to go through one of the
+vertices in the vertex-cut $S$. For any component $P$ of the subgraph induced by $S$ it is the
+case that every edge from $X$ to $P$ has been removed or every edge
+from $P$ to $Y$ has been removed so no such path
+exists, and therefore $X$is not connected to $Y$ in $G-T$ and $T$ is an edge-cut.
 
 $\kappa(G) = \lambda(G)$
