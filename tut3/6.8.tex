@@ -1,0 +1,44 @@
+\begin{enumerate}[(a)]
+    \item Let $G$ be an outerplanar graph. We then add a vertex $v$ 
+    that is adjacent to all vertices in $G$. 
+    
+    We can see this graph $G+v$ is planar by drawing $v$
+    above the embedding of $G$ and joining $v$ with the vertices in $G$ 
+    along the outer boundary. These edges don't cross any boundaries of 
+    $G$ so $G+v$ is planar.  $G+v \cong G+K_1$.
+
+    Let $G$ not be outerplanar and let $G+K_1$ be planar. We can embed
+    $G+K_1$ so that $K_1$ is on the outer boundary of $G+K_1$.
+    If we remove $K_1$ from this embedding there should exist a
+    vertex $a$ on the interior of $G$ since $G$ is not outerplanar.
+    But then the edge $aK_1$ crosses an edge on the outer boundary
+    of $G$ making $G+K_1$ not planar, contradiction. Therefore
+    $G$ is outerplanar.
+
+    \item Let $G$ be an outerplanar graph of order $n \ge 2$ and size $m$, 
+    then $G+K_1$ is planar with size $m+n$ and order $n+1$. Then
+    by Corollary 33 
+        $$ m+n \le 3(n+1) - 6 = 3n+3-6 = 3n-3$$
+        $$m \le 2n-3$$
+        as required.
+
+    \item $G$ is outerplanar iff $G+K_1$ is planar iff $G+K_1$ contains
+			a subdivision of
+			$K_5$ or $K_{3,3}$ (Kuratowski). We show
+			this is equivalent to $G$ containing a subdivision of $K_4$ or $K_{2,3}$.
+
+			Let $v$ be the vertex of $K_1$, and suppose $G+K_1$ contains $S$,
+			a subdivision of $K_5$ or $K_{3,3}$. If $v \notin S$, then
+			$G$ contains a subdivision of $K_5$ or $K_{3,3}$ , so contains
+			a subdivision of $K_4$ or $K_{2,3}$. Otherwise $v \in S$.
+			But then $S-v$ still contains a subdivision of $K_4$ or $K_{2,3}$,
+			since if $P$ is $K_5$ or $K_{3,3}$ minus any vertex or edge,
+			$P$ still contains $K_4$ or $K_{2,3}$ as a subgraph, respectively.
+			Since $S-v$ is a subgraph of $G$, $G$ contains a subdivision of 
+			$K_4$ or $K_{2,3}$. 
+
+			Now suppose $G$ contains $S$, a subdivision of $K_4$ or $K_{2,3}$.
+			Then $S+K_1$ contains a subdivision of $K_5$ or $K_{3,3}$, but
+			$S+K_1$ is a subgraph of $G+K_1$, so $G+K_1$ contains a subdivision of 
+			$K_5$ or $K_{3,3}$ .
+\end{enumerate}
