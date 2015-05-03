@@ -1,3 +1,5 @@
+Q. if $G$ is a connected cubic graph, prove that $\kappa(G) = \lambda(G)$
+
 Let $G$ be a cubic graph. 
 
 By Whitney's theorem we know that $\kappa(G) \le \lambda(G) \le \delta(G) = 3 $.
@@ -22,4 +24,10 @@ above.
 For every vertex in our vertex cut we have inserted one edge into our edge
 cut so $|S| = |T|$ as required. 
 
-show that $T$ is actually an edge-cut
+Let $x\in X, y \in Y$, a $x-y$ path would have to go through one of the
+vertices in the vertex-cut $S$. For any such vertex $s \in S$ it is the
+case that the edge from the component $X$ to $s$ has been removed or the
+vertex from $s$ to the component $Y$ has been removed so no such path
+exists and $T$ is a vertex cut. 
+
+$\kappa(G) = \lambda(G)$
