@@ -1,0 +1,25 @@
+This is clearly true for $K_1$ (the empty walk satisfies the property). We
+proceed by induction. Suppose for induction the result is true for all
+connected graphs with at most $m-1$ edges (with $m>1$). We show it is true
+for a graph $G$ with $m$ edges by construction. We have two cases:
+	\begin{itemize} 
+	\item $G$ contains a cycle. Let $u,v$ be adjacent vertices on the
+	 cycle. Then $G-uv$ is connected, and so contains a closed spanning walk
+	 $W$ that uses every edge twice. By rotating $W$, we may assume it begins
+	 at $v$. Then $(u \| W \| u)$ is a closed spanning walk that uses $uv$
+	 twice, and every edge in $G-uv$ twice, so is a walk with the required
+	 property. Hence such a walk exists for $G$.
+
+	 \item $G$ contains no cycle. $G$ is connected, so is a tree. Let $x$
+	 be a leaf and $y$ the vertex adjacent to $x$. Then $G-x$ is a connected 
+	 graph
+	 with $m-1$ edges, so contains a closed spanning walk $W$ that uses
+	 every edge twice. Again, we may rotate $W$ to begin at $y$. Then
+	 $W'=(x\| W \| x)$ is a closed spanning walk that uses $xy$ twice,
+	 and every edge in $G-x$ twice. Moreover, since $x$ is a leaf these are
+	 all the edges in $G$, so $W'$ is a walk with the required property
+	 for $G$.
+
+ \end{itemize}
+In either case, there is a walk for $G$ and hence by induction for all
+connected graphs.
