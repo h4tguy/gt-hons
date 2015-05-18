@@ -1,0 +1,30 @@
+\paragraph*{a)}
+We must prove that $\Gamma_S$ is a subgroup of $\Gamma$. By definition, $\Gamma_S \subset \Gamma$.
+The identity $\iota \in \Gamma_S$ as, $\forall v \in V(G)$ we have $v^{\iota} = v$.
+Take $\alpha \in \Gamma_S$. We know it has an inverse $\alpha^{-1} \in \Gamma$.
+Now, for all $v \in S$ we have 
+$v = v^{\alpha} = v^{\iota} = v^{\alpha \alpha^{-1}}$ so $v= v^{\alpha^{-1}}$ i.e. $\alpha^{-1} \in \Gamma_S$.
+Finally, for closure, take $\alpha,\beta \in \Gamma_S$. Then, for all $v \in S$,
+$v^{\alpha \beta} = v^{\beta} = v$, so $\alpha \beta \in \Gamma_S$. 
+Hence $\Gamma_S$ is a subgroup of $\Gamma$.
+
+\paragraph*{bi)} First, label the vertices of $C_5$ as $\{v_1, v_2, v_3, v_4, v_5 \}$. 
+Then consider $\Gamma_{\{ v_1 \} }$. This has 2 elements:
+reflection on the axis through vertex $v_1$ 
+(with cycle notation $\left(v_2 v_5\right) \left(v_3 v_4 \right)$)
+and the identity permutation $\iota$.
+As the choice $v_1$ was arbitrary, this holds for any vertex in $C_5$.
+Hence the fixing number is not 1.
+If we choose 2 vertices, without loss of generality $v_1$ and $v_2$,
+we know that (from the definition in the question): 
+$\Gamma_{\{ v_1, v_2 \} } = \Gamma_{\{ v_1 \} } \cap \Gamma_{\{ v_2 \} }$.
+Since the intersecandi (sets to be intersected) have only one element
+in common, $\iota$, we have that $\Gamma_{\{ v_1, v_2 \} }$ has cardinality 1 
+i.e. the fixing number of $C_5$ is at most 2, that is, it is 2.
+
+\paragraph*{bii)} The orbit stabilizer theorem tells us that for all $v \in V(G)$,
+$|\Gamma_v| |v^{\Gamma}| = |\Gamma|$.
+So, if the fixing number is 1, then $\exists v \in V(G)$ such that 
+$|\Gamma_v|= |\Gamma_{ \{ v \} }| = 1$, so $|v^{\Gamma}| = |\Gamma | $.
+Moreover, if the fixing number is not 1, then $\nexists v$ s.t. 
+$|\Gamma_v| = 1$ so for all vertices $v$, $|v^{\Gamma}| \neq |\Gamma|$.
