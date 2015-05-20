@@ -1,0 +1,18 @@
+Following the outline in the notes, let $V = \{ 1,2,3,4,5 \}$ 
+and $V^{(2)}$ be the set of 2-subsets of of $V$. 
+We are able to construct the following table:\\
+\begin{tabular}{c|c|c}
+ Cycle structure over $V$&Cycle structure over $V^{(2)}$& $2^{\text{\# of cycles}}$\\
+ &&$\times$ \# of such permutations\\
+ (1)(2)(3)(4)(5)&(12)(13)(14)(15)(23)(24)(25)(34)(35)(45)& $2^{10} \times 1$\\
+ (12)&(12)(13,23)(14,24)(15,25)(34)(35)(45)&$2^{7} \times 10$\\
+ (123)&(14,24,34)(15,25,35)(12,23,13)(45)&$2^4 \times 20$\\
+ (12)(34)&(12)(34)(15,25)(35,45)(13,24)(14,23)&$2^6 \times 15$\\
+ (123)(45)&(45)(14,25,34,15,24,35)(12,23,13)&$2^3 \times 20$\\
+ (1234)&(15,25,35,45)(12,23,34,14)(13,24)&$2^3 \times 30$\\
+ (12345)&(12,23,34,45,15)(13,24,35,14,25)&$2^2 \times 25$
+\end{tabular}
+Adding all the values in the rightmost column gives 7968, 
+which is $|S_4| = 120$ times the number of isomorphism classes
+by the CFB Theorem. 
+So there are $7968/120 = 34$ non-isomorphic graphs of order 5.
