@@ -1,0 +1,56 @@
+Suppose $G$ has an Eulerian circuit $x_1x_2\dots x_kx_1$. Suppose also
+that the vertex $y$ appears $l$ times in the circuit, as 
+$x_{i_1},\dots,x_{i_l}$. Then, since every edge appears in the circuit
+exactly once, and the edges in the circuit incident with $l$ are precisely
+$$x_{i_1-1}x_{i_1},x_{i_1}x_{i_1+1},x_{i_2-1}x_{i_2},x_{i_2}x_{i_2+1},\dots,x_{i_l-1}x_{i_l},x_{i_l}x_{i_{l+1}}$$, of which there are $2l$, the degree
+of $y$ is $2l$, which is even. Since the choice of $y$ was arbitrary, the
+degree of every vertex in $G$ is even.
+
+We now show that every connected
+graph where all vertices are of even degree has
+an Eulerian circuit. Suppose for contradiction this was not the case, and
+let $G$ be a connected graph of minimal
+size in which every vertex has even degree
+and the graph has no Eulerian circuit. Choose an arbitrary vertex $v$ and
+construct a trail $T$ in the following way: start at $v$, and while there is
+an edge incident to the current vertex that has not been used,
+follow that edge. 
+
+Suppose that
+the algorithm terminates at vertex $v'$. Suppose for contradiction
+$v' \neq v$. Then suppose $v'$ appears $k$ times in $T$ preceding the
+last occurence. At each of these internal occurences, two distinct edges
+incident with $v'$ are traversed, and another edge incident with $v'$ is
+traversed before the final occurence. Also there are no edges incident with
+$v'$ not traversed, since the algorithm terminated at $v'$. Therefore the
+degree of $v'$ is $2k+1$, a contradiction.
+
+Hence $v'=v$ and $T$ is a circuit. Consider $G-E(T)$. This consists of
+a number of isolated vertices and some nontrivial components 
+$P_1,P_2,\dots,P_n$. Also, note that, for any $i$, $1 \le i \le n$,
+if $x \in V(P_i)$ appears $l$ times in $T$, then $2l$ edges adjacent to $x$
+are included in $T$ and so $\text{deg}_{G-E(T)} x$ is even. Also, $P_i$
+has strictly fewer edges than $G$ so is Eulerian. 
+
+Finally, suppose for
+contradiction that no vertex of $P_i$ is in $T$. Then, let $u$ be a vertex
+in $P_i$, and let $u=u_1,u_2,\dots,u_p=v$ be a $u-v$ path in $G$ (which
+exists since $G$ is connected). Then
+let $j_0$ be the maximum $j$ such that $u_j \in P_i$. Note $v\in T$ so
+$v \notin P_i$, and $j_0<p$. Then $u_{j_0+1} \notin P_i$, so
+$u_{j_0}u_{j_0+1} \notin P_i$ and hence $u_{j_0}u_{j_0+1} \in T$ and 
+finally $u_{j_0} \in T$, a contradiction.
+
+Let $T$ be $x_1,x_2,\dots,x_{c_1},\dots,x_{c_2},\dots,x_{c_n},\dots,
+x_q=x_1$, with
+wlog $x_{c_i} \in P_i$, and let $Q_i$ be an Eulerian circuit for $P_i$ 
+starting and ending at $x_{c_i}$. Then
+$$x_1,x_2,\dots,x_{c_1-1},Q_1,x_{c_1+1},\dots,x_{c_n-1},Q_n,
+x_{c_n+1},\dots,x_q=x_1$$
+is an Eulerian circuit for $G$ since it traverse every edge in 
+$E(T) \cup \left( \bigcup_{i=1}^n E(P_i)\right)$ exactly once,
+contradicting that
+$G$ was not Eulerian.
+
+It follows that any connected graph with every vertex of even degree must
+be Eulerian.
