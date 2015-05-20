@@ -1,0 +1,30 @@
+We label the vertices of $G = P_2 \times P_3$ as {$a,b,c,d,e,f$} 
+with $a \sim b \sim c$ and $d \sim e \sim f$ where $d(c) = d(e) = 3$
+i.e. $c$ and $e$ are the central vertices.
+\paragraph*{a)} The automorphisms of $G$ are 
+\begin{itemize}
+\item $\iota = (a)$\\
+\item $\alpha = (ad)(be)(cf)$\\
+\item $\beta = (ac)(df)$\\
+\item $\gamma = (af)(dc)(be)$
+\end{itemize}
+
+\paragraph*{b)} $a^{\Gamma} = \{ a,c,d,f \} = c^{\Gamma} = d^{\Gamma} = f^{\Gamma}$ and\\
+$b^{\Gamma} = \{ e,f \} = e^{\Gamma}$.
+
+\paragraph*{c)} $\Gamma_a = \{ \iota \} = \Gamma_c = \Gamma_d = \Gamma_f$ and\\
+$\Gamma_b = \{ \beta \}$.
+
+\paragraph*{d)} $\text{fix}(\iota) = V(G)$,\\
+$\text{fix}(\alpha) = \emptyset = \text{fix}(\gamma)$, and\\
+$\text{fix}(\beta) = \{c,e \}$. \\
+Thus we obtain from the CFB Theorem that the number
+of orbits should be $\frac{6 + 2 + 0 + 0}{4} = 2$.
+
+\paragraph*{e)} $G$ has 6 vertices, so there are $2^6 = 64$ ways 
+to colour the vertices with 2 colours. 
+However, some of these graphs may be isomorphic: 
+for each distinct cycle making up a permutation in the isomorphism group, 
+we fix a colour. Then, using CFB Theorem, we divide by the order of the automorphism group. 
+That is:
+$\text{The number of distinct 2-colourings of $G$} = \frac{2^6}{4} + \frac{2^3}{4} + \frac{2^3}{4} + \frac{2^5}{4} = 16 + 2 +8 + 2 = 28$.
